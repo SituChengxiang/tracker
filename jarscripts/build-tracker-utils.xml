@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE project>
-<project name="build-tracker-jar" default="countreader" basedir=".\">
+<project name="build-tracker-jar" default="countreader" basedir=".">
 	<property name="workspace" value="../../" />
 	<property name="trackerdir" value="${workspace}/tracker" />
 	<property name="src_osp" value="${workspace}/osp/src" />
@@ -125,16 +125,16 @@
 	<!--javadocs: generate javadoc documentation-->
 	<target name="javadocs">
 		<copy todir="${temp}">
-			<fileset dir="${src_osp}" excludes=
-				"demo/, 
+			<fileset dir="${src_osp}" excludes="
+				demo/, 
 				csm/, 
 				davidson/, 
 				demo/, 
 				demoJS/, 
 				debugging/, 
 				test/"/>
-			<fileset dir="${src_tracker}" excludes=
-				"test/"/>
+			<fileset dir="${src_tracker}" excludes="
+				test/"/>
 		</copy>
 		<delete dir="${docs}"/>
 		<mkdir dir="${docs}"/>
@@ -152,16 +152,16 @@
 	<target name="backup_src" depends="clean">
 		<mkdir dir="${backup}src ${date}"/>
 		<copy todir="${backup}src ${date}">
-			<fileset dir="${src_osp}" excludes=
-				"demo/, 
+			<fileset dir="${src_osp}" excludes="
+				demo/, 
 				csm/, 
 				davidson/, 
 				demo/, 
 				demoJS/, 
 				debugging/, 
 				test/"/>
-			<fileset dir="${src_tracker}" excludes=
-				"test/"/>
+			<fileset dir="${src_tracker}" excludes="
+				test/"/>
 		</copy>
 	</target>
 	

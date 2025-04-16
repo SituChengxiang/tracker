@@ -27,13 +27,13 @@
 	
 	<!--compile: clean and compile the source files to temp directory-->
 	<target name="compile" depends="clean">
-		<javac srcdir="${src_osp}" destdir="${temp}" source="1.8" debug="true" debuglevel="lines,vars,source" includeantruntime="false">
+		<javac srcdir="${src_osp}" destdir="${temp}" source="21" target="21" debug="true" debuglevel="lines,vars,source" includeantruntime="false">
 			<compilerarg value="-Xlint:-serial"/>
 		</javac>
 		<copy todir="${temp}/org/opensourcephysics/resources">
 			<fileset dir="${src_osp}/org/opensourcephysics/resources"/>
 		</copy>
-		<javac srcdir="${src_tracker}" destdir="${temp}" source="1.8" debug="true" debuglevel="lines,vars,source" includeantruntime="false">
+		<javac srcdir="${src_tracker}" destdir="${temp}" source="21" target="21" debug="true" debuglevel="lines,vars,source" includeantruntime="false">
 			<compilerarg value="-Xlint:-serial"/>
 		</javac>
 		<copy todir="${temp}/org/opensourcephysics/cabrillo/tracker/resources">
@@ -255,6 +255,3 @@
 	</target>
 
 </project>
-
-
-
